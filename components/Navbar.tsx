@@ -28,6 +28,13 @@ const Navbar = () => {
         )} 
         {session ? (
           <> 
+            <div className="pr-5 hidden md:block">
+              <Link href="/dashboard">
+              <Button className="cursor-pointer">
+                Dashboard
+              </Button>
+              </Link>
+            </div> 
             <div className="hidden md:block">
               <Button onClick={() => signOut({callbackUrl: '/'})} className="cursor-pointer">
                 Logout
@@ -52,6 +59,11 @@ const Navbar = () => {
                     Welcome, {user?.username || user?.email}
                   </DropdownMenuItem>
 
+                  <Link href="/dashboard">
+                  <DropdownMenuItem className="cursor-pointer">
+                    Dashboard
+                  </DropdownMenuItem>
+                  </Link>
                   <DropdownMenuItem onClick={() => signOut({callbackUrl: '/'})} className="cursor-pointer">
                     Logout
                   </DropdownMenuItem>
