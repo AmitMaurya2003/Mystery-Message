@@ -119,7 +119,7 @@ const page = () => {
  
     <div className="mb-8">
       <h2 className="mb-2 text-sm font-semibold text-gray-700">
-        Your Unique Profile Link
+        Share Your Personal Anonymous Message Link
       </h2>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
