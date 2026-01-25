@@ -31,7 +31,7 @@ const Home = () => {
         </h1>
 
         <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-300">
-          Explore Mystery Message — where your identity always remains a secret.
+          Mystery Message is a platform where, after logging in, you receive a unique personal link created just for you. You can share this link publicly on your social media profiles, in bio sections, posts, directly with friends or anywhere you want people to find it. Anyone who opens your link can send you an anonymous message without signing up or revealing their identity. All messages sent through your link are collected privately in your dashboard, where only you can view, manage, or delete them.
         </p>
       </section>
  
