@@ -143,6 +143,7 @@ const page = () => {
           <h1 className="text-2xl font-semibold text-center tracking-tight">
             Ask Anonymous Message with AI
           </h1>
+          <p className="text-center tracking-tight">Not sure what to write? Let AI help you generate an anonymous message.</p>
 
           {/* Question + Answer */}
           {lastUserMessage && (
@@ -187,7 +188,7 @@ const page = () => {
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask something..."
+              placeholder="Ask AI to help you write a message…"
               className="
             flex-1
             rounded-xl
