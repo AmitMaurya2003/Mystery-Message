@@ -5,7 +5,7 @@ The public page also includes an AI-powered message suggestion feature that help
 <br/>
 <br/>
 
-<img width="1887" height="873" alt="Screenshot 2026-01-25 014036" src="https://github.com/user-attachments/assets/8c4a48e5-64bc-40d8-86f4-36201a0cc7ff" />
+<img width="1878" height="865" alt="Screenshot 2026-01-26 153434" src="https://github.com/user-attachments/assets/0491314c-a5ec-457e-9740-ebb12172e03c" />
 <br/>
 <img width="959" height="842" alt="Screenshot 2026-01-25 014059" src="https://github.com/user-attachments/assets/8ade0b99-9edb-4655-bb89-c4b9a62a1f2a" />
 <br/>
