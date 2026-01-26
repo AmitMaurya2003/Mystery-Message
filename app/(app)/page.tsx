@@ -10,9 +10,15 @@ import {
 import AutoPlay from 'embla-carousel-autoplay'
 import messages from "@/src/messages.json"
 import { Mail } from "lucide-react"
+import { User } from "next-auth"
+import { useSession } from "next-auth/react"
+import { Button } from "@/components/ui/button" 
+import Link from "next/link"
 
 const Home = () => {
 
+  const { data: session } = useSession()
+  const user: User = session?.user as User
 
   return (
   <>
@@ -31,8 +37,17 @@ const Home = () => {
         </h1>
 
         <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-300">
-          Mystery Message is a platform where, after logging in, you receive a unique personal link created just for you. You can share this link publicly on your social media profiles, in bio sections, posts, directly with friends or anywhere you want people to find it. Anyone who opens your link can send you an anonymous message without signing up or revealing their identity. All messages sent through your link are collected privately in your dashboard, where only you can view, manage, or delete them.
+          After logging in, Mystery Message creates a unique link for you. Share it anywhere and receive anonymous messages privately in your dashboard.
         </p>
+      </section>
+
+      <section className="text-center mb-10">
+      {
+      !session && (
+          <Link href="/sign-in">
+            <Button className="scale-200 pl-5 pr-5 text-2xl bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400 text-black cursor-pointer">Login</Button>
+          </Link>
+      )} 
       </section>
  
       <Carousel
