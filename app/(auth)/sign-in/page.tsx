@@ -36,6 +36,7 @@ const page = () => {
         toast.error("Login Failed. Incorrect username or password", { position: "top-right" })
       }
       else {
+        router.replace('/sign-up')
         toast.error(`Error. ${result.error}`, { position: "top-right" })
       }
     } 
