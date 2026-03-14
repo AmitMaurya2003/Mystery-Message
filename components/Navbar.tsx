@@ -39,7 +39,7 @@ const Navbar = () => {
               <Button onClick={() => signOut({callbackUrl: '/'})} className="cursor-pointer">
                 Logout
               </Button>
-            </div> 
+            </div>
             <div className="md:hidden">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

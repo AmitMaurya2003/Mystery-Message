@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 import { getToken } from "next-auth/jwt"
 
-export async function middleware(request: NextRequest) {
-  const token = await getToken({ req: request })
+export async function proxy(request: NextRequest) {
+  const token = await getToken({ req: request }) 
   const { pathname } = request.nextUrl
 
   // Allow auth & public pages
@@ -17,8 +17,10 @@ export async function middleware(request: NextRequest) {
     if (
       token &&
       (
+        pathname === "/" ||
         pathname.startsWith("/sign-in") ||
-        pathname.startsWith("/sign-up")
+        pathname.startsWith("/sign-up") ||
+        pathname.startsWith("/verify")
       )
     ) {
       return NextResponse.redirect(new URL("/dashboard", request.url))
@@ -36,5 +38,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/sign-in", "/sign-up", "/verify/:path*"],
+  matcher: ["/", "/dashboard/:path*", "/sign-in", "/sign-up", "/verify/:path*"],
 }
