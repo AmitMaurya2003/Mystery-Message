@@ -19,6 +19,7 @@ const Home = () => {
 
   const { data: session } = useSession()
   const user: User = session?.user as User 
+
   return (
   <>
     <main className="grow flex flex-col items-center justify-center px-4 sm:px-8 md:px-24 py-16
@@ -39,15 +40,6 @@ const Home = () => {
           After logging in, Mystery Message creates a unique link for you. Share it anywhere and receive anonymous messages privately in your dashboard.
 
         </p> 
-      </section>
-       
-       <section className="text-center mb-10">
-      {
-      !session && (
-          <Link href="/sign-in">
-            <Button className="scale-200 pl-5 pr-5 text-2xl bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400 text-black cursor-pointer">Login</Button>
-          </Link>
-      )}  
       </section>
 
       <section className="text-center mb-10">
