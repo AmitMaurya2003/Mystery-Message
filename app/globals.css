@@ -35,24 +35,43 @@
   --ring: oklch(0.704 0.04 256.788);
 }
 
-/* ---------------- THEME INLINE ---------------- */
+/* ---------------- TAILWIND THEME (CRITICAL FIX) ---------------- */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius: var(--radius);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 /* ---------------- DARK MODE ---------------- */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 .dark {
   --background: oklch(0.129 0.042 264.695);
@@ -67,7 +86,7 @@
   }
 }
 
-/* ---------------- LAYOUT FIX ---------------- */
+/* ---------------- GLOBAL FIX ---------------- */
 
 html,
 body {
@@ -76,31 +95,24 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  color: black;
-} 
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-  box-shadow: 0 0 0px 1000px transparent inset !important;
-  transition: background-color 5000s ease-in-out 0s;  
-}
-input, 
-textarea,
-select {
-  color: #111827 !important; /* dark text */
-  caret-color: #111827;
-  background-color: white; 
 }
 
-/* Visible placeholders */
+/* ---------------- INPUT FIX ---------------- */
+
+input,
+textarea,
+select {
+  color: #111827 !important;
+  caret-color: #111827;
+  background-color: white;
+}
+
 input::placeholder,
 textarea::placeholder {
-  color: #9ca3af !important; /* gray-400 */
+  color: #9ca3af !important;
   opacity: 1;
 }
 
-/* Fix Chrome / Edge / Brave autofill */
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
@@ -110,27 +122,11 @@ select:-webkit-autofill {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* Prevent iOS Safari zoom on input focus */
 input,
 textarea,
 select {
   font-size: 16px;
 }
-
-/* Remove Edge & IE password reveal button */
-input::-ms-reveal,
-input::-ms-clear {
-  display: none;
-}
-
-/* Remove Chrome autofill eye (some cases) */
-input[type="password"]::-webkit-credentials-auto-fill-button {
-  visibility: hidden;
-  display: none !important;
-  pointer-events: none;
-}
-
-
 
 /* @import "tailwindcss";
 @import "tw-animate-css";

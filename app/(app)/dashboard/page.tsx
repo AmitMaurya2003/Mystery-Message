@@ -154,8 +154,7 @@ const page = () => {
           checked={acceptMessages}
           onCheckedChange={handleSwitchChange}
           disabled={isSwitchLoading}
-          className="bg-transparent border-black-50 scale-125 data-[state=checked]:bg-transparent data-[state=unchecked]:bg-transparent hover:bg-transparent focus-visible:ring-2 focus-visible:ring-primary/50
-                    cursor-pointer"
+          className="scale-125 cursor-pointer data-[state=checked]:bg-green-500 data-[state=unchecked]:bg-gray-300"
         />
         <span
           className={`text-sm font-medium ${
